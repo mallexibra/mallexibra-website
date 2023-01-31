@@ -1,0 +1,253 @@
+@use 'variabel' as var;
+@use 'mixin' as func;
+
+.container{
+    width: 80%;
+    margin: auto;
+    padding: 188px 88px 88px 88px;
+    box-sizing: border-box;
+    @media screen and (max-width: 768px) {
+        width: 95%;
+        padding: 100px 0 0 0;
+    }
+    header{
+        display: flex;
+        justify-content: space-between;
+        min-height: calc(100vh - 176px);
+        @media screen and (max-width: 768px) {
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column-reverse;
+        }
+        .head_name{
+            h1{
+                font-size: 40px;
+                font-weight: 700;
+                #specialist{
+                    font-size: 16px;
+                    font-weight: 600;
+                    padding: 5px 13px;
+                    background-color: var.$color-secondary;
+                    border-radius: 3px;
+                    color: white;
+                    position: relative;
+                    top: -5px;
+                    @media screen and (max-width: 768px) {
+                        font-size: 14px;
+                    }
+                }
+            }
+            p{
+                font-size: 12px;
+                font-weight: 500;
+            }
+
+            .link_personal{
+                font-weight: 700;
+                font-size: 12px;
+                display: flex;
+                margin: 16px 0;
+                align-items: center;
+                @media screen and (max-width: 768px) {
+                    justify-content: center;
+                    align-items: center;
+                }
+                .hire_me{
+                    padding: 6px 15px;
+                    background-color: var.$color-primary;
+                    display: inline-block;
+                    margin-right: 12px;
+                    text-decoration: none;
+                    color: white;
+                    border-radius: 3px;
+                    transition: all 0.3s ease-in-out;
+                }
+                .hire_me:hover{
+                    @include func.buttonhover();
+                }
+                .talk{
+                    text-decoration: none;
+                    color: rgb(0, 0, 0);
+                    display: flex;
+                    padding: 3px 6px;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 3px;
+                    box-sizing: border-box;
+                }
+            }
+            .contact_github{
+                display: flex;
+                div{
+                    margin-right: 20px;
+                    h5{
+                        font-size: 20px;
+                        font-weight: 700;
+                    }
+                    p{
+                        font-size: 14px;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+        .head_photo{
+            width: 334px;
+            height: 290px;
+            background-image: url(../img/my-photo.jpg);
+            background-size: cover;
+            background-position-y: -200px;
+            border-radius: 3px;
+            border: 3px solid var.$color_hard;
+        }
+    }
+    main{
+        section{
+            padding-top: 90px;
+            margin-bottom: 40px;
+        }
+        #about{
+            @include func.tittleSection();
+            .description_section{
+                display: grid;
+                grid-template-areas:
+                                'desc desc'
+                                'skill listskill';
+                grid-template-columns: 100px auto;
+                align-items: start;
+                column-gap: 20px;
+                padding-left: 90px;
+                @media screen and (max-width: 768px) {
+                    padding: 0 10px;
+                    grid-template-areas:
+                                'desc'
+                                'skill'
+                                'listskill';
+                    grid-template-columns: auto;
+                }
+                p{
+                    font-size: 14px;
+                    font-weight: 500;
+                    margin: 20px 0;
+                    grid-area: desc;
+                }
+                h1, ul li{
+                    font-size: 14px;
+                    font-weight: 800;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                h1{
+                    grid-area: skill;
+                    @media screen and (max-width: 768px) {
+                        display: flex;
+                        justify-content: flex-start;
+                        margin-bottom: 10px;
+                    }
+                }
+                ul{
+                    list-style: none;
+                    display: grid;
+                    gap: 10px;
+                    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+                    grid-area: listskill;
+                    li{
+                        background-color: var.$color_secondary;
+                        padding: 2px 10px;
+                        color: white;
+                        border-radius: 3px;
+                    }
+                }
+            }
+        }
+        #experience{
+            @include func.tittleSection();
+            .description_section{
+                padding-left: 90px;
+                display: grid;
+                grid-template-areas:
+                        'education experience';
+                grid-template-columns: repeat(auto-fit, 1fr);
+                @media screen and (max-width: 768px) {
+                    padding: 0 10px;
+                    grid-template-areas:
+                            'education'
+                            'experience';
+                    justify-content: center;
+                }
+                .education{
+                    grid-area: education;
+                    @include func.eduxperience();
+                }
+                .experience{
+                    grid-area: experience;
+                    @include func.eduxperience();
+                }
+            }
+        }
+        #certification{
+            @include func.tittleSection();
+            .description_section{
+                @include func.cardDetails(flex);
+                @media screen and (max-width: 768px) {
+                    padding: 0 10px;
+                }
+                .card.one{
+                    background-image: url(../img/certification1.jpg)
+                }
+                .card.two{
+                    background-image: url(../img/certification2.jpg)
+                }
+            }
+        }
+        #portfolio{
+            @include func.tittleSection();
+            .description_section{
+                @include func.cardDetails(flex);
+                @media screen and (max-width: 768px) {
+                    padding: 0 10px;
+                }
+                .type{
+                    width: max-content;
+                    font-size: 10px;
+                    font-weight: 500;
+                    padding: 0 2px;
+                    border-radius: 3px;
+                    background-color: var.$color_hard;
+                }
+            }
+        }
+        #find_me{
+            h1{
+                font-size: 16px;
+                font-weight: 700;
+                width: max-content;
+                margin: auto;
+                position: relative;
+            }
+            h1::after{
+                content: '';
+                position: absolute;
+                bottom: 0; left: -5px; right: -5px;
+                height: 10px;
+                background-color: var.$color_soft;
+                z-index: -1;
+            }
+            ul{
+                display: flex;
+                justify-content: center;
+                margin-top: 25px;
+                gap: 10px;
+                list-style: none;
+                a:hover{
+                    filter: brightness(200%);
+                    img{
+                        transform: scale(1.2);
+                    }
+                }
+            }
+        }
+    }
+}

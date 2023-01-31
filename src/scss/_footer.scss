@@ -1,0 +1,52 @@
+@use 'variabel' as var;
+@use 'mixin' as func;
+
+footer{
+    background-color: var.$color_soft;
+    .container{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        color: var.$color-primary;
+        @media screen and (max-width: 768px) {
+            padding: 0 10px;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            gap: 10px;
+        }
+        .footer_left{
+            width: 40%;
+            h2{
+                font-size: 40px;
+                font-weight: 700;
+            }
+            p{
+                font-size: 12px;
+                font-weight: 400;
+                margin-top: 7px;
+            }
+            @media screen and (max-width: 768px) {
+                width: 90%;
+                margin: 50px auto 0 auto;
+            }
+        }
+        .footer_right{
+            width: 40%;
+            p{
+                font-size: 12px;
+                font-weight: 600;
+                margin-bottom: 12px;
+            }
+            iframe{
+                border-radius: 3px;
+                border: 3px solid var.$color-primary;
+                position: relative;
+            }
+            @media screen and (max-width: 768px) {
+                width: 90%;
+                margin: 0 auto 50px auto;
+            }
+        }
+    }
+}

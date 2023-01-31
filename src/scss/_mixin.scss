@@ -1,0 +1,144 @@
+@use "variabel" as var;
+
+@mixin button($color, $bgcolor, $weight) {
+  color: $color;
+  display: inline-block;
+  padding: 3px 19px;
+  background-color: $bgcolor;
+  border-radius: 3px;
+  font-weight: $weight;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+@mixin buttonhover {
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+@mixin buttonclick($bgcolor) {
+  background-color: transparent;
+  border: 2px solid $bgcolor;
+  color: $bgcolor;
+  transition: all 0.2s ease-in-out;
+}
+
+@mixin tittleSection {
+  .tittle_section {
+    font-size: 16px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    span {
+      width: 69px;
+      height: 10px;
+      background-color: var.$color-secondary;
+      margin-right: 21px;
+    }
+  }
+}
+
+@mixin eduxperience {
+  h6 {
+    font-size: 16px;
+    font-weight: 700;
+  }
+  p {
+    font-size: 12px;
+    font-weight: 600;
+    span {
+      opacity: 0.5;
+    }
+  }
+  & > h6 {
+    margin: 15px 0;
+  }
+  ul {
+    position: relative;
+  }
+  ul::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 1.5px;
+    width: 3px;
+    height: calc(100% - 32px);
+    background-color: var.$color_soft;
+    z-index: 999;
+  }
+  ul li {
+    padding-left: 20px;
+    position: relative;
+    list-style: none;
+    margin-bottom: 20px;
+  }
+  ul li > span {
+    position: absolute;
+    padding: 2px;
+    top: 5px;
+    left: -10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var.$color_hard;
+  }
+  ul li > span::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: var.$color_soft;
+  }
+}
+
+@mixin cardDetails ($display) {
+  margin-top: 52px;
+  padding-left: 90px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 245px);
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  .card {
+    // width: 245px;
+    height: 173px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+    display: flex;
+    align-items: flex-end;
+    .card_detail {
+      display: $display;
+      flex-direction: column;
+      width: 100%;
+      padding: 12px;
+      background-color: white;
+      color: black;
+      text-decoration: none;
+      height: 30%;
+      border-radius: 3px;
+      transition: all 0.3s ease-in-out;
+      .judul {
+        font-size: 14px;
+        font-weight: 700;
+      }
+      .from {
+        font-size: 10px;
+        font-weight: 500;
+        opacity: 75%;
+      }
+    }
+  }
+  .card:hover .card_detail {
+    height: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.7);
+    box-sizing: border-box;
+  }
+}

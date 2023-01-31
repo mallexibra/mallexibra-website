@@ -1,0 +1,12 @@
+@use 'nav';
+@use 'container';
+@use 'footer';
+@use 'toggledark';
+@use 'swipeup';
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}

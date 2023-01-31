@@ -1,0 +1,17 @@
+@use 'variabel' as var;
+@use  'mixin' as func;
+
+.toggle_theme{
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    background-color: var.$dark-mode;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 36px; right: 36px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
