@@ -362,7 +362,7 @@ nav .nav_wrapper .burger_menu span:nth-child(3) {
   content: "";
   position: absolute;
   top: 10px;
-  left: 1.5px;
+  left: 1px;
   width: 3px;
   height: calc(100% - 32px);
   background-color: #EAE7B1;
@@ -421,7 +421,7 @@ nav .nav_wrapper .burger_menu span:nth-child(3) {
   content: "";
   position: absolute;
   top: 10px;
-  left: 1.5px;
+  left: 1px;
   width: 3px;
   height: calc(100% - 32px);
   background-color: #EAE7B1;
