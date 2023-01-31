@@ -19,7 +19,7 @@ setInterval(() => {
     specialist.innerText = `Front-End Developer`;
     count++;
   } else if (count == 1) {
-    specialist.innerText = `UI/UX Designer`;
+    specialist.innerText = `Web Designer`;
     count++;
   } else if (count == 2) {
     specialist.innerText = `Content Creator`;
