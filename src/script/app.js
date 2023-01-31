@@ -46,13 +46,13 @@ document.addEventListener("scroll", (e) => {
 toggleTheme.addEventListener("click", () => {
   if (toggle) {
     mode("#0624212f", colorBackground, "white", "0 0 2px rgba(0, 0, 0, 0.7)");
-    toggleIcon.setAttribute("src", `/src/img/sun.svg`);
+    toggleIcon.setAttribute("src", 'src/img/sun.svg');
     toggleTheme.style.backgroundColor = 'white';
     toggle = false;
     modeIcon = "dark";
   } else {
     mode("rgba(255, 255, 255, 0.3)", "white", "black", "none");
-    toggleIcon.setAttribute("src", `/src/img/moon.svg`);
+    toggleIcon.setAttribute("src", 'src/img/moon.svg');
     toggleTheme.style.backgroundColor = '#39403E';
     toggle = true;
     modeIcon = "light";
