@@ -4,7 +4,8 @@ nav {
   left: 0;
   right: 0;
   width: 100%;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
   z-index: 1000;
 }
 nav .nav_wrapper {
@@ -580,6 +581,36 @@ nav .nav_wrapper .burger_menu span:nth-child(3) {
   align-items: center;
   background-color: rgba(255, 255, 255, 0.7);
   box-sizing: border-box;
+}
+.container main #portfolio .description_section .one {
+  background-image: url(../img/mallexibra.png);
+  background-size: cover;
+  background-position: 0;
+}
+.container main #portfolio .description_section .two {
+  background-image: url(../img/IB-Software.png);
+  background-size: cover;
+  background-position: 0;
+}
+.container main #portfolio .description_section .three {
+  background-image: url(../img/bookself.png);
+  background-size: cover;
+  background-position: 0;
+}
+.container main #portfolio .description_section .four {
+  background-image: url(../img/bikinweb.png);
+  background-size: cover;
+  background-position: 0;
+}
+.container main #portfolio .description_section .five {
+  background-image: url(../img/todolist.png);
+  background-size: cover;
+  background-position: 0;
+}
+.container main #portfolio .description_section .six {
+  background-image: url(../img/linktree.png);
+  background-size: cover;
+  background-position: 0;
 }
 @media screen and (max-width: 768px) {
   .container main #portfolio .description_section {

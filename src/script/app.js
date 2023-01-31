@@ -45,13 +45,13 @@ document.addEventListener("scroll", (e) => {
 
 toggleTheme.addEventListener("click", () => {
   if (toggle) {
-    mode(colorBackground, "white", "0 0 2px rgba(0, 0, 0, 0.7)");
+    mode("#0624212f", colorBackground, "white", "0 0 2px rgba(0, 0, 0, 0.7)");
     toggleIcon.setAttribute("src", `/src/img/sun.svg`);
     toggleTheme.style.backgroundColor = 'white';
     toggle = false;
     modeIcon = "dark";
   } else {
-    mode("white", "black", "none");
+    mode("rgba(255, 255, 255, 0.3)", "white", "black", "none");
     toggleIcon.setAttribute("src", `/src/img/moon.svg`);
     toggleTheme.style.backgroundColor = '#39403E';
     toggle = true;
@@ -66,9 +66,9 @@ setInterval(() => {
   });
 }, 1000);
 
-function mode(colorBackground, color, shadow) {
+function mode(colorNav, colorBackground, color, shadow) {
   document.body.style.backgroundColor = colorBackground;
-  nav.style.backgroundColor = colorBackground;
+  nav.style.backgroundColor = colorNav;
   document.querySelector("#find_me h1").style.textShadow = shadow;
   textDark.forEach((element) => {
     element.style.color = color;

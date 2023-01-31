@@ -206,6 +206,36 @@
             @include func.tittleSection();
             .description_section{
                 @include func.cardDetails(flex);
+                .one{
+                    background-image: url(../img/mallexibra.png);
+                    background-size: cover;
+                    background-position: 0;
+                }
+                .two{
+                    background-image: url(../img/IB-Software.png);
+                    background-size: cover;
+                    background-position: 0;
+                }
+                .three{
+                    background-image: url(../img/bookself.png);
+                    background-size: cover;
+                    background-position: 0;
+                }
+                .four{
+                    background-image: url(../img/bikinweb.png);
+                    background-size: cover;
+                    background-position: 0;
+                }
+                .five{
+                    background-image: url(../img/todolist.png);
+                    background-size: cover;
+                    background-position: 0;
+                }
+                .six{
+                    background-image: url(../img/linktree.png);
+                    background-size: cover;
+                    background-position: 0;
+                }
                 @media screen and (max-width: 768px) {
                     padding: 0 10px;
                 }
