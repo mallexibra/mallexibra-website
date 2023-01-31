@@ -9,6 +9,7 @@ let navItem = document.querySelector(".nav_item");
 let buttonCV = document.querySelector(".button_cv");
 let burgerMenu = document.querySelector(".burger_menu");
 let span = document.querySelectorAll(".burger_menu span");
+let toggleIcon = document.querySelector(".toggle_theme img");
 let toggleNav = false;
 let modeIcon = "light";
 let toggle = true;
@@ -45,10 +46,14 @@ document.addEventListener("scroll", (e) => {
 toggleTheme.addEventListener("click", () => {
   if (toggle) {
     mode(colorBackground, "white", "0 0 2px rgba(0, 0, 0, 0.7)");
+    toggleIcon.setAttribute("src", `/src/img/sun.svg`);
+    toggleTheme.style.backgroundColor = 'white';
     toggle = false;
     modeIcon = "dark";
   } else {
     mode("white", "black", "none");
+    toggleIcon.setAttribute("src", `/src/img/moon.svg`);
+    toggleTheme.style.backgroundColor = '#39403E';
     toggle = true;
     modeIcon = "light";
   }
