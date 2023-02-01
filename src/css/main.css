@@ -133,12 +133,6 @@ nav .nav_wrapper .burger_menu span {
   background-color: black;
   border-radius: 2px;
 }
-nav .nav_wrapper .burger_menu span:nth-child(2) {
-  width: 70%;
-}
-nav .nav_wrapper .burger_menu span:nth-child(3) {
-  width: 50%;
-}
 
 .container {
   width: 80%;
