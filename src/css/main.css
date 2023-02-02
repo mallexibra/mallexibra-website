@@ -153,8 +153,8 @@ nav .nav_wrapper .burger_menu span {
 }
 @media screen and (max-width: 1095px) and (min-width: 768px) {
   .container header {
-    background-color: blue;
     justify-content: space-between;
+    min-height: 300px;
   }
 }
 @media screen and (max-width: 768px) {

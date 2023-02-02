@@ -15,8 +15,8 @@
         justify-content: space-between;
         min-height: calc(100vh - 176px);
         @media screen and (max-width: 1095px) and (min-width: 768px) {
-            background-color: blue;
             justify-content: space-between;
+            min-height: 300px;
         }
         @media screen and (max-width: 768px) {
             width: 100%;
