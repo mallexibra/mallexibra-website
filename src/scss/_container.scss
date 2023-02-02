@@ -6,7 +6,7 @@
     margin: auto;
     padding: 188px 88px 88px 88px;
     box-sizing: border-box;
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1095px) {
         width: 95%;
         padding: 100px 0 0 0;
     }
@@ -14,6 +14,10 @@
         display: flex;
         justify-content: space-between;
         min-height: calc(100vh - 176px);
+        @media screen and (max-width: 1095px) and (min-width: 768px) {
+            background-color: blue;
+            justify-content: space-between;
+        }
         @media screen and (max-width: 768px) {
             width: 100%;
             align-items: center;
