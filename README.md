@@ -13,8 +13,8 @@ My personal website built using:
 Live demo website: [https://mallexibra.github.io/mallexibra-website/](https://mallexibra.github.io/mallexibra-website/).
 Repository github: [https://github.com/mallexibra/mallexibra-website](https://github.com/mallexibra/mallexibra-website).
 
-####### Light Mode
+###### Light Mode
 ![LightMode](src/img/lightmode.png)
 
-####### Dark Mode
+###### Dark Mode
 ![DarkMode](src/img/dakrmode.png)
