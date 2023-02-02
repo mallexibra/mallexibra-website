@@ -25,6 +25,9 @@
             flex-direction: column-reverse;
         }
         .head_name{
+            @media screen and (max-width: 768px) {
+                width: 340px;
+            }
             h1{
                 font-size: 40px;
                 font-weight: 700;
