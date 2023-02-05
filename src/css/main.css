@@ -617,6 +617,13 @@ nav .nav_wrapper .burger_menu span {
   background-size: cover;
   background-position: 0;
 }
+.container main #portfolio .description_section .description-card {
+  display: none;
+  font-size: 10px;
+}
+.container main #portfolio .description_section .card:hover .description-card {
+  display: block;
+}
 @media screen and (max-width: 768px) {
   .container main #portfolio .description_section {
     padding: 0 10px;

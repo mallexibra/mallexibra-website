@@ -243,6 +243,13 @@
                     background-size: cover;
                     background-position: 0;
                 }
+                .description-card{
+                    display: none;
+                    font-size: 10px;
+                }
+                .card:hover .description-card{
+                    display: block;
+                }
                 @media screen and (max-width: 768px) {
                     padding: 0 10px;
                 }
